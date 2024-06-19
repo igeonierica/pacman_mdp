@@ -44,7 +44,7 @@ class ValueIterationAgent(ValueEstimationAgent):
         self.values = util.Counter() # A Counter is a dict with default 0
 
         # Write value iteration code here
-        "*** YOUR CODE HERE ***"
+
         for i in range(iterations):
             newValues = util.Counter()
             for state in mdp.getStates():
@@ -56,7 +56,7 @@ class ValueIterationAgent(ValueEstimationAgent):
                     if qValue > maxQValue:
                         maxQValue = qValue
                 newValues[state] = maxQValue
-            self.values = newValues
+            self.values = newValues 
 
     def getValue(self, state):
         """
